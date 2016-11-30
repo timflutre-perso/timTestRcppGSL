@@ -1,0 +1,12 @@
+Package: timTestRcppGSL
+Title: This R package is used to test how to work with RcppGSL
+Version: 0.1.0
+Authors@R: person("Timothée", "Flutre", email = "timothee.flutre@inra.fr", role = c("aut", "cre"))
+Description: This R package is used to test how to work with RcppGSL.
+Depends:
+    R (>= 3.0.0)
+License: GPL-3 | AGPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 5.0.1
+Suggests: testthat
