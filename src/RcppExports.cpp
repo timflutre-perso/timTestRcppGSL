@@ -6,20 +6,32 @@
 
 using namespace Rcpp;
 
-// sumVec
-double sumVec(const RcppGSL::Vector& x);
-RcppExport SEXP timTestRcppGSL_sumVec(SEXP xSEXP) {
+// sumVec_cpp_int
+double sumVec_cpp_int(const RcppGSL::Vector& x);
+RcppExport SEXP timTestRcppGSL_sumVec_cpp_int(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< const RcppGSL::Vector& >::type x(xSEXP);
-    rcpp_result_gen = Rcpp::wrap(sumVec(x));
+    rcpp_result_gen = Rcpp::wrap(sumVec_cpp_int(x));
+    return rcpp_result_gen;
+END_RCPP
+}
+// sumVec_cpp_ext
+RcppExport SEXP sumVec_cpp_ext(SEXP x);
+RcppExport SEXP timTestRcppGSL_sumVec_cpp_ext(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< SEXP >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(sumVec_cpp_ext(x));
     return rcpp_result_gen;
 END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"timTestRcppGSL_sumVec", (DL_FUNC) &timTestRcppGSL_sumVec, 1},
+    {"timTestRcppGSL_sumVec_cpp_int", (DL_FUNC) &timTestRcppGSL_sumVec_cpp_int, 1},
+    {"timTestRcppGSL_sumVec_cpp_ext", (DL_FUNC) &timTestRcppGSL_sumVec_cpp_ext, 1},
     {NULL, NULL, 0}
 };
 

@@ -1,6 +1,6 @@
 #include <RcppGSL.h>
 
-//' Sum a vector
+//' Sum a vector (C/C++ internal implementation)
 //'
 //' Return the sum of all the elements in a vector.
 //' @param x a numeric vector
@@ -8,7 +8,7 @@
 //' @author Timothee Flutre
 //' @export
 // [[Rcpp::export]]
-double sumVec(const RcppGSL::Vector & x) {
+double sumVec_cpp_int(const RcppGSL::Vector & x) {
   double out = 0;
   size_t i = 0;
   for(i=0; i < x->size; ++i)

@@ -1,4 +1,4 @@
-##' Sum a vector
+##' Sum a vector (R implementation)
 ##'
 ##' Return the sum of all the elements in a vector.
 ##' @param x a numeric vector

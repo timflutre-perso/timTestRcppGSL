@@ -1,6 +1,6 @@
 Package: timTestRcppGSL
 Title: This R package is used to test how to work with RcppGSL
-Version: 0.2.0
+Version: 0.3.0
 Authors@R: person("Timothée", "Flutre", email = "timflutre@gmail.com", role = c("aut", "cre"))
 Description: This R package is used to test how to work with RcppGSL.
 License: AGPL-3
